@@ -29,8 +29,5 @@ jobs:
     - name: Run tests
       run: pytest --cov=currency_converter --cov=history_manager --cov-fail-under=60 --cov-report term-missing
 
-    - name: Check test coverage
-      run: pytest --cov=currency_converter --cov=history_manager --cov-fail-under=60
-
     - name: Lint code
       run: flake8 currency_converter.py history_manager.py tests/
