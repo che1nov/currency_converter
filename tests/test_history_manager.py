@@ -1,4 +1,4 @@
-from history_manager import HistoryManager
+from ..history_manager import HistoryManager
 import pytest
 import sys
 import os
