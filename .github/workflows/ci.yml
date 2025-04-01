@@ -26,14 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Start server
-        run: |
-          python server.py &
-          sleep 5  # Ждем, пока сервер запустится
-
       - name: Run tests
         run: |
-          pytest --cov=server tests/
+          PYTHONPATH=. pytest --cov=server tests/
 
       - name: Check coverage
         run: |
