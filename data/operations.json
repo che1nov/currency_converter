@@ -4,5 +4,23 @@
         "from_currency": "USD",
         "to_currency": "EUR",
         "converted_amount": 92.0
+    },
+    {
+        "amount": 100,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "converted_amount": 92.0
+    },
+    {
+        "amount": 100,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "converted_amount": 92.0
+    },
+    {
+        "amount": 100,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "converted_amount": 92.0
     }
 ]

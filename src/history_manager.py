@@ -18,7 +18,8 @@ class HistoryManager:
             json.dump(self.operations, file, indent=4)
 
     def add_operation(self, operation):
-        self.operations.append(operation)
+        if operation not in self.operations:  # Проверка на дубликаты
+            self.operations.append(operation)
         self.save_operations()
 
     def get_operations(self):
