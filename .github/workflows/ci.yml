@@ -30,7 +30,7 @@ jobs:
       run: pytest
 
     - name: Check test coverage
-      run: pytest --cov=currency_converter --cov=history_manager --cov-fail-under=100
+      run: pytest --cov=currency_converter --cov=history_manager --cov-fail-under=100 --cov-report term-missing --cov-omit="main.py"
 
     - name: Lint code
       run: flake8 currency_converter.py history_manager.py tests/
