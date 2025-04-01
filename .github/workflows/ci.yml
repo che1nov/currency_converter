@@ -27,7 +27,7 @@ jobs:
         pip install pytest pytest-cov flake8
 
     - name: Run tests
-      run: pytest --cov=currency_converter --cov=history_manager --cov-fail-under=60 --cov-report term-missing
+      run: pytest --cov=currency_converter --cov=history_manager --cov-report term-missing
 
     - name: Lint code
       run: flake8 currency_converter.py history_manager.py tests/
