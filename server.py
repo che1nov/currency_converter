@@ -1,18 +1,17 @@
 import os
 import csv
 import json
-import http.server
-import socketserver
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from urllib.parse import urlparse, parse_qs
 from dotenv import load_dotenv
-
 
 # Загрузка переменных окружения из .env-файла
 load_dotenv()
 
 # Параметры приложения
+PORT = int(os.getenv("SERVER_PORT", 8000))
 CURRENCIES_FILE = os.getenv("CURRENCIES_FILE", "currencies.csv")
 OPERATIONS_FILE = os.getenv("OPERATIONS_FILE", "operations.json")
-
 
 # Загрузка курсов валют из CSV-файла
 def load_currencies(file_path=CURRENCIES_FILE):
@@ -22,12 +21,10 @@ def load_currencies(file_path=CURRENCIES_FILE):
         reader = csv.DictReader(file)
         return {row['currency']: float(row['rate']) for row in reader}
 
-
 # Сохранение операций в JSON-файл
 def save_operations(operations, file_path=OPERATIONS_FILE):
     with open(file_path, mode='w', encoding='utf-8') as file:
         json.dump(operations, file, indent=4)
-
 
 # Загрузка операций из JSON-файла
 def load_operations(file_path=OPERATIONS_FILE):
@@ -35,7 +32,6 @@ def load_operations(file_path=OPERATIONS_FILE):
         return []
     with open(file_path, mode='r', encoding='utf-8') as file:
         return json.load(file)
-
 
 # Конвертация суммы из одной валюты в другую
 def convert_currency(amount, from_currency, to_currency, rates):
@@ -46,23 +42,13 @@ def convert_currency(amount, from_currency, to_currency, rates):
     converted_amount = (amount / rate_from) * rate_to
     return round(converted_amount, 2)
 
-
 # Обработчик запросов
-class CurrencyConverterHandler(http.server.BaseHTTPRequestHandler):
-
-    def do_OPTIONS(self):
-        self.send_response(200)
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type")
-        self.end_headers()
-
+class CurrencyConverterHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/operations":
             operations = load_operations()
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
-            self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
             self.wfile.write(json.dumps(operations).encode("utf-8"))
         else:
@@ -103,7 +89,6 @@ class CurrencyConverterHandler(http.server.BaseHTTPRequestHandler):
                 }
                 self.send_response(200)
                 self.send_header("Content-Type", "application/json")
-                self.send_header("Access-Control-Allow-Origin", "*")
                 self.end_headers()
                 self.wfile.write(json.dumps(response).encode("utf-8"))
 
@@ -112,15 +97,8 @@ class CurrencyConverterHandler(http.server.BaseHTTPRequestHandler):
         else:
             self.send_error(404, "Not Found")
 
-
-# Функция для получения порта
-def get_port():
-    return int(os.getenv("SERVER_PORT", 8000))
-
-
 # Запуск сервера
 if __name__ == "__main__":
-    PORT = get_port()
-    with socketserver.TCPServer(("", PORT), CurrencyConverterHandler) as httpd:
+    with HTTPServer(("", PORT), CurrencyConverterHandler) as httpd:
         print(f"Serving on port {PORT}...")
         httpd.serve_forever()

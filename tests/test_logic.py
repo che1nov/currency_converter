@@ -1,4 +1,5 @@
 import csv
+import json
 from server import load_currencies, save_operations, load_operations, convert_currency
 
 
@@ -19,8 +20,7 @@ def test_load_currencies(tmp_path):
 def test_save_and_load_operations(tmp_path):
     file = tmp_path / "operations.json"
 
-    operations = [{"amount": 100, "from_currency": "USD",
-                   "to_currency": "EUR", "result": 92.0}]
+    operations = [{"amount": 100, "from_currency": "USD", "to_currency": "EUR", "result": 92.0}]
     save_operations(operations, file)
 
     loaded_operations = load_operations(file)
