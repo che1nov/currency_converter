@@ -30,4 +30,4 @@ jobs:
       run: pytest --cov=currency_converter --cov=history_manager --cov-fail-under=80 --cov-report term-missing --ignore=main.py
 
     - name: Lint code
-      run: flake8 currency_converter.py history_manager.py tests/
+      run: flake8 src/currency_converter.py src/history_manager.py tests/
