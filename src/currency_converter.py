@@ -1,5 +1,5 @@
 class CurrencyConverter:
-    def __init__(self, csv_file):
+    def __init__(self, csv_file="data/exchange_rates.csv"):
         self.rates = {}
         with open(csv_file, "r") as file:
             next(file)  # Пропускаем заголовок

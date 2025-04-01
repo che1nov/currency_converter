@@ -13,4 +13,4 @@ htmlcov/
 *.log
 
 # CSV files
-test_rates.csv
+data/test_rates.csv

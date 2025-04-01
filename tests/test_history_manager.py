@@ -1,8 +1,10 @@
 from history_manager import HistoryManager
 
 
-def test_add_and_get_operations():
-    manager = HistoryManager()
+def test_add_and_get_operations(tmp_path):
+    file_path = tmp_path / "test_operations.json"
+    manager = HistoryManager(file_path=str(file_path))
+
     operation = {
         "amount": 100,
         "from_currency": "USD",
@@ -13,6 +15,7 @@ def test_add_and_get_operations():
     assert manager.get_operations() == [operation]
 
 
-def test_empty_history():
-    manager = HistoryManager()
+def test_empty_history(tmp_path):
+    file_path = tmp_path / "test_operations.json"
+    manager = HistoryManager(file_path=str(file_path))
     assert manager.get_operations() == []

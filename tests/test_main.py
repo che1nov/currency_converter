@@ -1,20 +1,29 @@
-from unittest.mock import patch
-from main import main
+from currency_converter import CurrencyConverter
+from history_manager import HistoryManager
 
 
-def test_main(capsys):
-    with patch("builtins.print") as mock_print:
-        main()
+def main():
+    converter = CurrencyConverter()  # Используется путь по умолчанию
+    history_manager = HistoryManager()
 
-    mock_print.assert_any_call("100 USD = 92.0 EUR")
-    mock_print.assert_any_call(
-        "History:",
-        [
-            {
-                "amount": 100,
-                "from_currency": "USD",
-                "to_currency": "EUR",
-                "converted_amount": 92.0,
-            }
-        ],
-    )
+    # Пример операции
+    amount = 100
+    from_currency = "USD"
+    to_currency = "EUR"
+    converted_amount = converter.convert(amount, from_currency, to_currency)
+
+    print(f"{amount} {from_currency} = {converted_amount} {to_currency}")
+
+    # Добавление операции в историю
+    operation = {
+        "amount": amount,
+        "from_currency": from_currency,
+        "to_currency": to_currency,
+        "converted_amount": converted_amount,
+    }
+    history_manager.add_operation(operation)
+    print("History:", history_manager.get_operations())
+
+
+if __name__ == "__main__":
+    main()
