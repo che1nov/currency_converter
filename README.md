@@ -1,28 +1,30 @@
-# Currency Converter
+## Currency Converter
 
-## Описание проекта
-Currency Converter — это простое веб-приложение на Python, которое позволяет конвертировать сумму из одной валюты в другую и сохранять историю операций. Приложение использует HTTP-сервер для обработки запросов и поддерживает загрузку курсов валют из CSV-файла.
+## Project Description
+Currency Converter is a simple Python web application that allows you to convert an amount from one currency to another and save the history of operations. The application uses an HTTP server to handle requests and supports loading currency rates from a CSV file.
 
-## Основные функции:
-- **Конвертация валют**: Пользователь может отправить POST-запрос с суммой, исходной и целевой валютой, чтобы получить конвертированную сумму.
-- **История операций**: Все выполненные конвертации сохраняются в JSON-файл и доступны через GET-запрос.
-- **Загрузка курсов валют**: Курсы валют загружаются из CSV-файла или могут быть настроены через .env.
+## Main Features:
+- **Currency Conversion**: User can send POST request with amount, source and target currency to get converted amount.
+- **Transaction History**: All conversions performed are saved to a JSON file and can be accessed via a GET request.
+- **Loading Currency Rates**: Exchange rates are loaded from a CSV file or can be customised via .env.
 
-## Тестирование
-Для запуска тестов используйте:
+## Testing
+To run tests use:
 ```bash
 pytest tests/
 ```
 
-## Конфигурация
-- **.env**: Используется для настройки курсов валют и других параметров.
-- **currencies.csv**: Файл с курсами валют.
+## Configuration
+- **.env**: Used to configure currency rates and other parameters.
+- **currencies.csv**: File with currency rates.
 
-## Структура проекта
-- `server.py`: Основной файл сервера.
-- `tests/`: Директория с тестами.
-- `operations.json`: Файл для хранения истории операций.
-- `index.html`, `script.js`, `style.css`: Файлы для фронтенда.
+## Project structure
+- `server.py`: Main server file.
+- `tests/`: Directory with tests.
+- `operations.json`: File for storing the history of operations.
+- `index.html`, `script.js`, `style.css`: Files for the frontend.
 
-## Лицензия
-Этот проект лицензирован под MIT License.
+## Licence
+This project is licensed under the MIT Licence.
+
+Translated with DeepL.com (free version)
