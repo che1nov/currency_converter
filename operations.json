@@ -1,0 +1,110 @@
+[
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "result": 90.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "result": 90.0
+    },
+    {
+        "amount": 200.0,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "result": 180.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "result": 90.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "USD",
+        "result": 100.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "EUR",
+        "to_currency": "USD",
+        "result": 111.11
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "RUB",
+        "result": 7500.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "RUB",
+        "result": 7500.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "RUB",
+        "result": 7500.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "RUB",
+        "result": 7500.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "USD",
+        "result": 100.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "USD",
+        "result": 100.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "USD",
+        "result": 100.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "USD",
+        "result": 100.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "USD",
+        "result": 100.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "USD",
+        "result": 100.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "USD",
+        "result": 100.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "USD",
+        "result": 100.0
+    }
+]
