@@ -28,11 +28,11 @@ jobs:
 
       - name: Run tests
         run: |
-          PYTHONPATH=. pytest --cov=server tests/
+          pytest --cov=server tests/
 
       - name: Check coverage
         run: |
-          coverage report --fail-under=80
+          coverage report --fail-under=100
 
       - name: Lint code
         run: |
