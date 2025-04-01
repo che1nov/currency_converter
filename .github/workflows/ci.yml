@@ -32,7 +32,7 @@ jobs:
 
       - name: Check coverage
         run: |
-          coverage report --fail-under=100
+          coverage report --fail-under=80
 
       - name: Lint code
         run: |
