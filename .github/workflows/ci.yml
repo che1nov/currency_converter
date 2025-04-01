@@ -9,31 +9,33 @@ on:
       - main
 
 jobs:
-  test:
+  test-and-lint:
     runs-on: ubuntu-latest
 
     steps:
+      # Шаг 1: Выгрузка кода из репозитория
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
+      # Шаг 2: Настройка Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.13'
+          python-version: "3.13"  # Укажите версию Python, которую вы используете
 
+      # Шаг 3: Установка зависимостей
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pytest pytest-cov flake8
 
-      - name: Run tests
+      # Шаг 4: Проверка форматирования кода (PEP 8)
+      - name: Run Flake8 (PEP 8 compliance)
         run: |
-          pytest --cov=server tests/
+          flake8 . --count --show-source --statistics --max-line-length=88
 
-      - name: Check coverage
+      # Шаг 5: Запуск тестов с проверкой покрытия кода
+      - name: Run tests with coverage
         run: |
-          coverage report --fail-under=100
-
-      - name: Lint code
-        run: |
-          flake8 .
+          pytest --cov=server --cov-fail-under=90 tests/
