@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2230eaa-9b26-4e21-b66d-ef11275fa24e" name="Changes" comment="1. Проверена логика конвертации валют.&#10;2. Убедились, что курсы валют в тестовых данных корректны.&#10;3. Исправлен ожидаемый результат в тесте `test_convert_valid_currencies`.&#10;4. Тесты успешно запущены и прошли.">
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init.py__" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_currency_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_currency_converter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_history_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_history_manager.py" afterDir="false" />
-    </list>
+    <list default="true" id="d2230eaa-9b26-4e21-b66d-ef11275fa24e" name="Changes" comment="1. Проверена логика конвертации валют.&#10;2. Убедились, что курсы валют в тестовых данных корректны.&#10;3. Исправлен ожидаемый результат в тесте `test_convert_valid_currencies`.&#10;4. Тесты успешно запущены и прошли." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1743491853704</updated>
-      <workItem from="1743491855089" duration="4708000" />
+      <workItem from="1743491855089" duration="5028000" />
     </task>
     <servers />
   </component>
