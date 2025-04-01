@@ -24,10 +24,10 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install pytest pytest-cov flake8
 
     - name: Run tests and check coverage
-      run: pytest --cov=currency_converter --cov=history_manager --cov-fail-under=60 --cov-report term-missing
+      run: pytest --cov=currency_converter --cov=history_manager --cov-fail-under=80 --cov-report term-missing --ignore=main.py
 
     - name: Lint code
       run: flake8 currency_converter.py history_manager.py tests/
