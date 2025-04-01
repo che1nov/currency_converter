@@ -11,3 +11,8 @@ def test_add_and_get_operations():
     }
     manager.add_operation(operation)
     assert manager.get_operations() == [operation]
+
+
+def test_empty_history():
+    manager = HistoryManager()
+    assert manager.get_operations() == []
