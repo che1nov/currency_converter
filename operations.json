@@ -106,5 +106,29 @@
         "from_currency": "USD",
         "to_currency": "USD",
         "result": 100.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "result": 92.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "result": 92.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "result": 92.0
+    },
+    {
+        "amount": 100.0,
+        "from_currency": "USD",
+        "to_currency": "EUR",
+        "result": 92.0
     }
 ]
