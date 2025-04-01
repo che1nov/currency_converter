@@ -1,4 +1,16 @@
-.env
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
 *.log
+
+# CSV files
+test_rates.csv
