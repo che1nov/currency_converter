@@ -35,6 +35,6 @@ def test_update_item():
 
 def test_delete_item():
     """Тест удаления элемента."""
-    item_id = 1  # Предполагаем, что такой элемент существуетc
+    item_id = 1  # Предполагаем, что такой элемент существует
     response = requests.delete(f"{BASE_URL}/items/{item_id}/")
     assert response.status_code == 204
