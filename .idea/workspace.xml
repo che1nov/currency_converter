@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2230eaa-9b26-4e21-b66d-ef11275fa24e" name="Changes" comment="1. Проверена логика конвертации валют.&#10;2. Убедились, что курсы валют в тестовых данных корректны.&#10;3. Исправлен ожидаемый результат в тесте `test_convert_valid_currencies`.&#10;4. Тесты успешно запущены и прошли." />
+    <list default="true" id="d2230eaa-9b26-4e21-b66d-ef11275fa24e" name="Changes" comment="1. Проверена логика конвертации валют.&#10;2. Убедились, что курсы валют в тестовых данных корректны.&#10;3. Исправлен ожидаемый результат в тесте `test_convert_valid_currencies`.&#10;4. Тесты успешно запущены и прошли.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/currency_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/currency_converter.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +37,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;apispec&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -66,7 +70,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1743491853704</updated>
-      <workItem from="1743491855089" duration="13156000" />
+      <workItem from="1743491855089" duration="16006000" />
+      <workItem from="1743526682685" duration="3311000" />
     </task>
     <servers />
   </component>
