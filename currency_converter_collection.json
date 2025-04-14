@@ -1,0 +1,52 @@
+{
+  "info": {
+    "name": "Currency Converter API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Convert Currency",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 100,\n  \"from\": \"USD\",\n  \"to\": \"EUR\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8008/convert",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8008",
+          "path": ["convert"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Conversion History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8008/history",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8008",
+          "path": ["history"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
