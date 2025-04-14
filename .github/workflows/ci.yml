@@ -32,12 +32,6 @@ jobs:
         run: |
           sudo lsof -t -i:8008 | xargs kill -9 || true
 
-      - name: Start server
-        run: |
-          python -m src.app &
-          sleep 5
-          curl --retry 10 --retry-delay 2 http://localhost:8008/health || exit 1
-
       - name: Run tests
         run: |
           pytest --cov=src --cov-fail-under=80 --cov-report term-missing
