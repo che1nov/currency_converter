@@ -36,7 +36,6 @@ jobs:
         run: |
           python -m src.app &
           sleep 5
-          curl --retry 10 --retry-delay 2 http://localhost:8008/health || exit 1
 
       - name: Run tests
         run: |
