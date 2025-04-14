@@ -1,6 +1,6 @@
 import os
 import json
-from history_manager import HistoryManager
+from src.history_manager import HistoryManager
 
 
 def test_add_and_get_operations(tmp_path):

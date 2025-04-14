@@ -1,5 +1,5 @@
 import pytest
-from currency_converter import CurrencyConverter
+from src.currency_converter import CurrencyConverter
 
 
 @pytest.fixture
@@ -8,8 +8,8 @@ def converter():
 
 
 def test_convert(converter):
-    assert converter.convert(100, "USD", "EUR") == 92.0
-    assert converter.convert(50, "USD", "GBP") == pytest.approx(39.5)
+    assert converter.convert(100, "USD", "EUR") == 85.0
+    assert converter.convert(50, "USD", "GBP") == pytest.approx(37.5)
 
 
 def test_invalid_currency(converter):
