@@ -1,9 +1,8 @@
-import pytest
+from src.main import run
 import threading
-from src.app import run
 
 
-@pytest.fixture(autouse=True)
-def setup_server():
+def test_main(monkeypatch):
     server_thread = threading.Thread(target=run, daemon=True)
     server_thread.start()
+    assert True

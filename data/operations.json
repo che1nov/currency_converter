@@ -22,5 +22,11 @@
         "from_currency": "USD",
         "to_currency": "EUR",
         "converted_amount": 92.0
+    },
+    {
+        "amount": 100,
+        "from": "USD",
+        "to": "EUR",
+        "result": 92.0
     }
 ]

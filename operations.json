@@ -1,0 +1,20 @@
+[
+    {
+        "amount": 100,
+        "from": "USD",
+        "to": "EUR",
+        "result": 92.0
+    },
+    {
+        "amount": 100,
+        "from": "USD",
+        "to": "EUR",
+        "result": 85.0
+    },
+    {
+        "amount": 100,
+        "from": "USD",
+        "to": "EUR",
+        "result": 108.23529411764707
+    }
+]

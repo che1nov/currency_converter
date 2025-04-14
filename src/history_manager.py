@@ -3,7 +3,7 @@ import os
 
 
 class HistoryManager:
-    def __init__(self, file_path="data/operations.json"):
+    def __init__(self, file_path="operations.json"):
         self.file_path = file_path
         self.operations = self.load_operations()
 
@@ -18,7 +18,7 @@ class HistoryManager:
             json.dump(self.operations, file, indent=4)
 
     def add_operation(self, operation):
-        if operation not in self.operations:  # Проверка на дубликаты
+        if operation not in self.operations:
             self.operations.append(operation)
         self.save_operations()
 
